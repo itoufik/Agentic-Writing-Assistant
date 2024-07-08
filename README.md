@@ -1,7 +1,7 @@
 
 # Agentic Writing Assistant
 
-Currently, we primarily use LLMs in zero-shot mode, where we prompt a model to generate its final output token by token without making revisions. This is similar to asking someone to write an essay from beginning to end without any chance to backtrack, yet expecting a high-quality result. Due to these challenges, LLMs sometimes produce suboptimal outputs.
+Currently, we primarily use LLMs in zero-shot mode, where we prompt a model to generate its final output token by token without making revisions. This is similar to asking someone to write an essay from beginning to end without any chance to backtrack, yet expecting a high-quality result. Due to this challenge, LLMs sometimes produce suboptimal outputs.
 
 Another significant issue is that LLMs lack knowledge about recent events. If asked about a current topic, they might generate completely hallucinated responses that are factually inaccurate.  
 
