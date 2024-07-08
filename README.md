@@ -45,7 +45,7 @@ After processing, this web data is fed to the LLM, addressing the issue of LLMs 
 ## Data Processing
 
 After extracting data from web pages, all the information is combined into a single Python string. This string is then divided into chunks using **Langchain's** default **Recursive Character Text Splitter**. The default chunk size and chunk overlap are set to **1500** and **100**, respectively. These chunks are vectorized using an embedding model from OpenAI, and the resulting vectors are indexed in FAISS. A similarity search is performed, followed by re-ranking. After the similarity search, the **top-k** chunks (default is half of the total chunks) are taken,then these top-k chunks are reanked using **ms-marco-MiniLM-L-6-v2** reranker model. after reranking top 6 (default value) are selected. These chunks are then used to modify the text.
-## Add information from the internet
+## Add information from the Internet
 
 After retrieving the top 6 chunks (default value), each chunk is used to make the previously generated text more informative and up-to-date.
 ## Implementation and Deployment
